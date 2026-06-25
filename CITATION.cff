@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite them using the information below."
+title: "R for Applied Psychology Students: Open Materials for Data Analysis in Psychological Research"
+type: software
+authors:
+  - family-names: "Resulbegović"
+    given-names: "Hakile"
+year: 2026
+date-released: "2026-06-25"
+version: "1.0.0"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/HaakileR/r-applied-psychology-students"
+abstract: "Open educational and research training materials for students of applied psychology, focused on data analysis in psychological research using R."
+keywords:
+  - R
+  - applied psychology
+  - psychological research
+  - data analysis
+  - open educational resources
+  - reproducible research
+  - statistics
+  - social sciences

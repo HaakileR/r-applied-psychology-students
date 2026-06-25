@@ -1,0 +1,69 @@
+---
+title: "Example Analysis Report"
+author: "Hakile Resulbegović"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(psych)
+library(broom)
+```
+
+# Introduction
+
+This report demonstrates a basic reproducible analysis workflow using synthetic data from the repository *R for Applied Psychology Students: Open Materials for Data Analysis in Psychological Research*.
+
+The data are synthetic and are used only for teaching.
+
+# Data import
+
+```{r}
+data <- read_csv("../data/processed/student_psychology_synthetic_scored.csv")
+glimpse(data)
+```
+
+# Descriptive statistics
+
+```{r}
+describe(data %>%
+           select(perceived_stress_score, digital_stress_score,
+                  academic_motivation_score, wellbeing_score,
+                  exam_anxiety_score))
+```
+
+# Visualization
+
+```{r}
+ggplot(data, aes(x = perceived_stress_score, y = wellbeing_score)) +
+  geom_point(alpha = 0.70) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(
+    title = "Perceived Stress and Well-being",
+    x = "Perceived stress score",
+    y = "Well-being score"
+  )
+```
+
+# Correlation
+
+```{r}
+cor.test(data$perceived_stress_score, data$wellbeing_score)
+```
+
+# Regression
+
+```{r}
+model <- lm(wellbeing_score ~ perceived_stress_score + digital_stress_score +
+              academic_motivation_score + sleep_hours,
+            data = data)
+
+summary(model)
+broom::tidy(model, conf.int = TRUE)
+```
+
+# Reporting note
+
+The results above are based on synthetic data and should not be interpreted as evidence about real students.
