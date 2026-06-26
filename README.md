@@ -1,9 +1,11 @@
 # R for Applied Psychology Students: Open Materials for Data Analysis in Psychological Research
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20925887.svg)](https://doi.org/10.5281/zenodo.20925887)
 
-**Version:** 1.0.0  
+**Version:** 1.0.2  
 **Author:** Hakile Resulbegoviq  
 **Repository:** `r-applied-psychology-students`  
 **License:** CC BY 4.0  
+**DOI:** https://doi.org/10.5281/zenodo.20925887  
 **Status:** Open educational and research training materials prepared for public release and Zenodo archiving.
 
 ## About the project
@@ -150,7 +152,7 @@ install.packages(c("tidyverse", "psych", "broom", "knitr", "rmarkdown"))
 
 ## Suggested citation
 
-> Resulbegoviq, H. (2026). *R for Applied Psychology Students: Open Materials for Data Analysis in Psychological Research* (Version 1.0.0). GitHub. https://github.com/HaakileR/r-applied-psychology-students
+> Resulbegoviq, H. (2026). *R for Applied Psychology Students: Open Materials for Data Analysis in Psychological Research* (Version 1.0.2). Zenodo. https://doi.org/10.5281/zenodo.20925887
 
 ## License
 
